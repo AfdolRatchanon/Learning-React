@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from "./logo.svg";
+import "./App.css";
+//import React from "react";
+import Transection from "./components/Transection";
+import FormComponent from "./components/FormComponent";
+
+//const Tital = () => <h1 style={{ color: "red", fontSize: "2rem", textAlign: "center" }}>แอพบัญชีรายรับ - รายจ่าย</h1>;
+const Description = () => <p>บันทีกข้อมูลบัญชีแต่ละวันของคุณ</p>;
+
+const design = { color: "red", textAlign: "center", fontSize: "2rem" };
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   return (
+      //NOTE ถ้ามี element หลายบันทัดต้องมี root เช่น div section > article React.Fragment <>
+      <div className="Container">
+         <h1 style={design}>แอพบัญชีรายรับ - รายจ่าย</h1>
+         <FormComponent />
+         <Description />
+         <Transection />
+      </div>
+   );
 }
 
 export default App;
